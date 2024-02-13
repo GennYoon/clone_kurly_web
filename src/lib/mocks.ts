@@ -43,4 +43,26 @@ export const mockList: ListProps[] = [
     discountPrice: 2990,
     review: 100000,
   },
+  {
+    id: 4,
+    url: "",
+    image:
+      "https://product-image.kurly.com/cdn-cgi/image/fit=crop,width=360,height=468,quality=85/product/image/02edd2c8-2b8b-49d7-a872-e6802aba5fa5.jpg",
+    title: "[마즈] 몰티져스 초콜릿볼 버켓 3종 (택1)",
+    price: 19980,
+    discountPercent: 15,
+    discountPrice: 16800,
+    review: 399,
+  },
+  {
+    id: 5,
+    url: "",
+    image:
+      "https://product-image.kurly.com/cdn-cgi/image/fit=crop,width=360,height=468,quality=85/product/image/47c2c4cf-d25b-4188-bd92-1a006e37413e.jpg",
+    title: "[이화수] 육개장 칼국수",
+    price: 8900,
+    discountPercent: 30,
+    discountPrice: 6230,
+    review: 184,
+  },
 ];
