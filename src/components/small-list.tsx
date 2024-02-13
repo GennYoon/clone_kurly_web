@@ -25,9 +25,9 @@ export default function SmallList({ title, desc, list }: SmallListProps) {
         {desc && <p className="text-gray-400">{desc}</p>}
       </div>
       <div className="flex snap-x overflow-x-scroll gap-2">
-        {[...list, ...list].map((item) => (
+        {[...list, ...list].map((item, index) => (
           <Link
-            key={item.id}
+            key={index}
             href="/"
             className="block snap-start shrink-0 max-w-[40vw] pl-4"
           >
@@ -44,9 +44,7 @@ export default function SmallList({ title, desc, list }: SmallListProps) {
               <button className="w-full mb-2 py-2 border rounded-md">
                 담기
               </button>
-              <p className="pb-1">
-                [또보겠지떡볶이집] 오리지널 떡볶이 베이컨 볶음밥 세트
-              </p>
+              <p className="pb-1 line-clamp-2">{item.title}</p>
               <p className="text-sm line-through text-gray-400">
                 {item.price}원
               </p>

@@ -9,7 +9,7 @@ export type ListProps = {
   review: number;
 };
 
-export const mockList: ListProps[] = [
+export const mockMarketList: ListProps[] = [
   {
     id: 1,
     url: "",
@@ -64,5 +64,53 @@ export const mockList: ListProps[] = [
     discountPercent: 30,
     discountPrice: 6230,
     review: 184,
+  },
+];
+
+export const mockBeautyList: ListProps[] = [
+  {
+    id: 1,
+    url: "",
+    image:
+      "https://product-image.kurly.com/cdn-cgi/image/fit=crop,width=360,height=468,quality=85/product/image/c1d571e7-7aeb-42d8-b5c9-f5d8a19dade7.jpg",
+    title:
+      "[헤라] 블랙 쿠션 (리필포함) 6종 (택1) (+ 쇼핑백, 컨투어링듀오, 퍼프2개 추가 증정)",
+    price: 66000,
+    discountPercent: 10,
+    discountPrice: 59400,
+    review: 10000,
+  },
+  {
+    id: 2,
+    url: "",
+    image:
+      "https://product-image.kurly.com/cdn-cgi/image/fit=crop,width=360,height=468,quality=85/product/image/583e4e81-7df4-4daf-b181-ef85e9ccc7bf.jpg",
+    title: "[록시땅] NEW 시어 핸드크림 & 립밤 스틱 듀오 기프트 세트",
+    price: 30000,
+    discountPercent: 10,
+    discountPrice: 27000,
+    review: 545,
+  },
+  {
+    id: 3,
+    url: "",
+    image:
+      "https://product-image.kurly.com/cdn-cgi/image/fit=crop,width=360,height=468,quality=85/product/image/45a59ffa-4e83-4225-aa8b-96ceeddefa22.jpg",
+    title: "[헤라] 센슈얼 누드 밤 7종 (택1) (+미니 누드 밤 추가 증정)",
+    price: 40000,
+    discountPercent: 10,
+    discountPrice: 36000,
+    review: 490,
+  },
+  {
+    id: 5,
+    url: "",
+    image:
+      "https://product-image.kurly.com/cdn-cgi/image/fit=crop,width=360,height=468,quality=85/product/image/4b473d29-8059-454e-a059-4e0edf5b7341.jpg",
+    title: "[산타마리아노벨라] 오드코롱향수 100ml 10종 (택1)",
+    price: 210000,
+    discountPercent: 10,
+    discountPrice: 189000,
+    review: 114,
   },
 ];
