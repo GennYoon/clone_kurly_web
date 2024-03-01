@@ -1,0 +1,229 @@
+"use client";
+
+const SignUpPage = () => {
+  return (
+    <div className="py-12">
+      <header className="flex items-center justify-center h-11 px-12">
+        <h1 className="text-2xl font-bold">회원가입</h1>
+      </header>
+      <section className="py-10 px-6">
+        <form className="flex flex-col gap-4">
+          <fieldset>
+            <label htmlFor="id">아이디</label>
+            <div className="flex gap-2">
+              <input id="id" type="text" className="flex-1" />
+              <button className="basis-24 btn-secondary">중복확인</button>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <label htmlFor="password" className="block">
+              비밀번호
+            </label>
+            <input id="password" type="password" className="w-full" />
+          </fieldset>
+          <fieldset>
+            <label className="block">비밀번호 확인</label>
+            <input id="repassword" type="password" className="w-full" />
+          </fieldset>
+          <fieldset>
+            <label className="block">이름</label>
+            <input id="name" type="text" className="w-full" />
+          </fieldset>
+          <fieldset>
+            <label className="block" htmlFor="email" aria-required>
+              이메일
+            </label>
+            <div className="flex gap-2">
+              <input id="email" type="email" className="flex-1" />
+              <button className="basis-24 btn-secondary">중복확인</button>
+            </div>
+          </fieldset>
+          <fieldset>
+            <label className="block">휴대폰</label>
+            <div className="flex gap-2">
+              <input id="phone" type="tel" className="w-full" />
+              <button className="basis-48" disabled>
+                인증번호 받기
+              </button>
+            </div>
+          </fieldset>
+          <fieldset>
+            <label>주소</label>
+            <input id="address" className="w-full" />
+            <p>배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
+          </fieldset>
+          <fieldset>
+            <label>생년월일</label>
+            <div className="flex items-center border border-gray-300 rounded-lg">
+              <input
+                type="tel"
+                className="w-1/3 text-center border-none"
+                placeholder="YYYY"
+              />
+              <span className="basis-1 text-gray-300">/</span>
+              <input
+                type="tel"
+                className="w-1/3 text-center border-none"
+                placeholder="MM"
+              />
+              <span className="basis-1 text-gray-300">/</span>
+
+              <input
+                type="tel"
+                className="w-1/3 text-center border-none"
+                placeholder="DD"
+              />
+            </div>
+          </fieldset>
+          <fieldset>
+            <label>성별</label>
+            <div>
+              <fieldset className="flex items-center gap-2">
+                <label htmlFor="gender01">
+                  <input
+                    id="gender01"
+                    type="radio"
+                    name="gender"
+                    className="peer"
+                    hidden
+                  />
+                  <div className="flex justify-center items-center before:content[''] w-4 h-4 rounded-full bg-[#5f0080]/20 before:w-2 before:h-2 before:bg-white before:rounded-full before:opacity-0 peer-checked:before:opacity-100 peer-checked:bg-[#5f0080]" />
+                </label>
+                <label htmlFor="gender01">남자</label>
+              </fieldset>
+
+              <fieldset className="flex items-center gap-2">
+                <label htmlFor="gender02">
+                  <input
+                    id="gender02"
+                    type="radio"
+                    name="gender"
+                    className="peer"
+                    hidden
+                  />
+                  <div className="flex justify-center items-center before:content[''] w-4 h-4 rounded-full bg-[#5f0080]/20 before:w-2 before:h-2 before:bg-white before:rounded-full before:opacity-0 peer-checked:before:opacity-100 peer-checked:bg-[#5f0080]" />
+                </label>
+                <label htmlFor="gender02">여자</label>
+              </fieldset>
+              <fieldset className="flex items-center gap-2">
+                <label htmlFor="gender03">
+                  <input
+                    id="gender03"
+                    type="radio"
+                    name="gender"
+                    className="peer"
+                    hidden
+                    defaultChecked
+                  />
+                  <div className="flex justify-center items-center before:content[''] w-4 h-4 rounded-full bg-[#5f0080]/20 before:w-2 before:h-2 before:bg-white before:rounded-full before:opacity-0 peer-checked:before:opacity-100 peer-checked:bg-[#5f0080]" />
+                </label>
+                <label htmlFor="gender03">선택안함</label>
+              </fieldset>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <label>추가입력 사항</label>
+            <div>
+              <fieldset className="flex items-center gap-2">
+                <label htmlFor="etc01">
+                  <input
+                    id="etc01"
+                    type="radio"
+                    name="etc"
+                    className="peer"
+                    hidden
+                  />
+                  <div className="flex justify-center items-center before:content[''] w-4 h-4 rounded-full bg-[#5f0080]/20 before:w-2 before:h-2 before:bg-white before:rounded-full before:opacity-0 peer-checked:before:opacity-100 peer-checked:bg-[#5f0080]" />
+                </label>
+                <label htmlFor="etc01">친구초대 추천인 아이디</label>
+              </fieldset>
+              <fieldset className="flex items-center gap-2">
+                <label htmlFor="etc02">
+                  <input
+                    id="etc02"
+                    type="radio"
+                    name="etc"
+                    className="peer"
+                    hidden
+                  />
+                  <div className="flex justify-center items-center before:content[''] w-4 h-4 rounded-full bg-[#5f0080]/20 before:w-2 before:h-2 before:bg-white before:rounded-full before:opacity-0 peer-checked:before:opacity-100 peer-checked:bg-[#5f0080]" />
+                </label>
+                <label htmlFor="etc02">참여 이벤트명</label>
+              </fieldset>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <label>이용약관동의</label>
+            <fieldset className="flex items-center gap-2">
+              <label htmlFor="agree">
+                <input id="agree" type="checkbox" className="peer" hidden />
+                <div className="flex justify-center items-center before:content[''] w-4 h-4 rounded-full bg-[#5f0080]/20 before:w-2 before:h-2 before:bg-white before:rounded-full before:opacity-0 peer-checked:before:opacity-100 peer-checked:bg-[#5f0080]" />
+              </label>
+              <label htmlFor="agree">전체 동의합니다.</label>
+            </fieldset>
+
+            <fieldset className="flex items-center gap-2">
+              <label htmlFor="agree01">
+                <input id="agree01" type="checkbox" className="peer" hidden />
+                <div className="flex justify-center items-center before:content[''] w-4 h-4 rounded-full bg-[#5f0080]/20 before:w-2 before:h-2 before:bg-white before:rounded-full before:opacity-0 peer-checked:before:opacity-100 peer-checked:bg-[#5f0080]" />
+              </label>
+              <label htmlFor="agree01">이용약관 동의</label>
+            </fieldset>
+            <fieldset className="flex items-center gap-2">
+              <label htmlFor="agree02">
+                <input id="agree02" type="checkbox" className="peer" hidden />
+                <div className="flex justify-center items-center before:content[''] w-4 h-4 rounded-full bg-[#5f0080]/20 before:w-2 before:h-2 before:bg-white before:rounded-full before:opacity-0 peer-checked:before:opacity-100 peer-checked:bg-[#5f0080]" />
+              </label>
+              <label htmlFor="agree02">개인정보 수집∙이용 동의</label>
+            </fieldset>
+            <fieldset className="flex items-center gap-2">
+              <label htmlFor="agree03">
+                <input id="agree03" type="checkbox" className="peer" hidden />
+                <div className="flex justify-center items-center before:content[''] w-4 h-4 rounded-full bg-[#5f0080]/20 before:w-2 before:h-2 before:bg-white before:rounded-full before:opacity-0 peer-checked:before:opacity-100 peer-checked:bg-[#5f0080]" />
+              </label>
+              <label htmlFor="agree03">개인정보 수집∙이용 동의</label>
+            </fieldset>
+            <fieldset className="flex items-center gap-2">
+              <label htmlFor="agree04">
+                <input id="agree04" type="checkbox" className="peer" hidden />
+                <div className="flex justify-center items-center before:content[''] w-4 h-4 rounded-full bg-[#5f0080]/20 before:w-2 before:h-2 before:bg-white before:rounded-full before:opacity-0 peer-checked:before:opacity-100 peer-checked:bg-[#5f0080]" />
+              </label>
+              <label htmlFor="agree04">
+                무료배송, 할인쿠폰 등 혜택/정보 수신 동의
+              </label>
+            </fieldset>
+            <div className="flex gap-8 pl-8">
+              <fieldset className="flex items-center gap-2">
+                <label htmlFor="sms">
+                  <input id="sms" type="checkbox" className="peer" hidden />
+                  <div className="flex justify-center items-center before:content[''] w-4 h-4 rounded-full bg-[#5f0080]/20 before:w-2 before:h-2 before:bg-white before:rounded-full before:opacity-0 peer-checked:before:opacity-100 peer-checked:bg-[#5f0080]" />
+                </label>
+                <label htmlFor="sms">SMS</label>
+              </fieldset>
+              <fieldset className="flex items-center gap-2">
+                <label htmlFor="email">
+                  <input id="email" type="checkbox" className="peer" hidden />
+                  <div className="flex justify-center items-center before:content[''] w-4 h-4 rounded-full bg-[#5f0080]/20 before:w-2 before:h-2 before:bg-white before:rounded-full before:opacity-0 peer-checked:before:opacity-100 peer-checked:bg-[#5f0080]" />
+                </label>
+                <label htmlFor="email">이메일</label>
+              </fieldset>
+            </div>
+            <fieldset className="flex items-center gap-2">
+              <label htmlFor="agree05">
+                <input id="agree05" type="checkbox" className="peer" hidden />
+                <div className="flex justify-center items-center before:content[''] w-4 h-4 rounded-full bg-[#5f0080]/20 before:w-2 before:h-2 before:bg-white before:rounded-full before:opacity-0 peer-checked:before:opacity-100 peer-checked:bg-[#5f0080]" />
+              </label>
+              <label htmlFor="agree05">본인은 만 14세 이상입니다.</label>
+            </fieldset>
+          </fieldset>
+          <button className="btn-primary">가입하기</button>
+        </form>
+      </section>
+    </div>
+  );
+};
+
+export default SignUpPage;

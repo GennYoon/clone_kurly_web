@@ -10,15 +10,15 @@ const SignInPage = () => {
       </header>
       <section className="py-10 px-6">
         <form>
-          <div className="flex flex-col border border-gray-300 rounded-lg overflow-hidden ">
+          <div className="flex flex-col border border-gray-300 rounded-xl overflow-hidden">
             <input
               type="text"
-              className="h-12 px-4 border-b border-gray-300 rounded-none outline-none"
+              className="h-12 px-4 border-b border-x-transparent border-t-transparent rounded-none outline-none"
               placeholder="아이디 입력"
             />
             <input
               type="password"
-              className="h-12 px-4 rounded-none outline-none"
+              className="h-12 px-4 border-none rounded-none outline-none"
               placeholder="비밀번호 입력"
             />
           </div>

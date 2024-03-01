@@ -1,4 +1,5 @@
 import Navigation, { NavLinkProps } from "@/components/navigation";
+import { Viewport } from "next";
 
 const navLinks: NavLinkProps[] = [
   { id: 1, href: "/main", title: "컬리추천" },
@@ -7,6 +8,10 @@ const navLinks: NavLinkProps[] = [
   { id: 4, href: "/main/collections/sales", title: "알뜰쇼핑" },
   { id: 5, href: "/main/collections/benefit", title: "특가/혜택" },
 ];
+
+export const viewport: Viewport = {
+  themeColor: "#5F0080",
+};
 
 export default function CollectionsLayout({
   children,

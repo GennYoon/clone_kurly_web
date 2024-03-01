@@ -69,8 +69,31 @@
 @layer base {
   * {
     @apply border-border;
+    font-family: "Pretendard Variable", Pretendard, sans-serif;
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  input {
+    @apply h-12 px-4 border border-gray-300 rounded-lg outline-none;
+  }
+
+  button {
+    @apply block h-12 rounded-lg font-bold bg-white border border-black;
+  }
+
+  button:disabled {
+    @apply text-gray-300 border border-gray-300;
+  }
+
+  .btn-primary {
+    @apply text-white bg-[#5f0080] border border-[#5f0080];
+  }
+
+  .btn-secondary {
+    @apply text-[#5f0080] bg-white border border-[#5f0080];
   }
 }

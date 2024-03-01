@@ -1,17 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Inter as FontSans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 import { cn } from "@/lib/utils";
 import Header from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
 
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
+const pretendard = localFont({
+  src: "../assets/fonts/PretendardVariable.woff2",
+  display: "swap",
+  weight: "45 920",
 });
 
 export const viewport: Viewport = {
-  themeColor: "#5F0080",
+  // themeColor: "#5F0080",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
@@ -37,11 +40,12 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-dvh bg-background font-sans antialiased",
-          fontSans.variable,
+          pretendard,
         )}
       >
         <Header />
         {children}
+        <Navbar />
       </body>
     </html>
   );
