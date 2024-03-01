@@ -7,9 +7,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
+const not_views = ["/member/signin", "/member/signup"];
+
 export default function Header() {
   const path = usePathname();
   const isBeauty = React.useMemo(() => path.includes("beauty"), [path]);
+
+  if (not_views.includes(path)) return null;
 
   return (
     <header
